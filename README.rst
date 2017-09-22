@@ -1,0 +1,1 @@
+mei/resources/README.rst

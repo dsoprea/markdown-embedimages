@@ -1,0 +1,16 @@
+language: python
+
+python:
+    - "2.6"
+    - "2.7"
+    - "3.3"
+    - "3.4"
+    - "pypy"
+
+script:
+    - nosetests --with-coverage --cover-package=mei
+
+after_success:
+    - pip install coveralls
+    - coverage run --source=mei setup.py -q nosetests
+    - coveralls
