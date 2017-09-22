@@ -1,8 +1,6 @@
 import os
 import setuptools
 
-import mei
-
 _SHORT_DESCRIPTION = \
     "A Mistune renderer that embeds images into the final document."
 
@@ -14,9 +12,12 @@ with open(os.path.join(_APP_PATH, 'mei', 'resources', 'README.rst')) as f:
 with open(os.path.join(_APP_PATH, 'mei', 'resources', 'requirements.txt')) as f:
     _REQUIREMENTS = [s.strip() for s in f if s.strip() != '']
 
+with open(os.path.join(_APP_PATH, 'mei', 'resources', 'version.txt')) as f:
+    _VERSION = f.read().strip()
+
 setuptools.setup(
     name="markdown-embedimages",
-    version=mei.__version__,
+    version=_VERSION,
     description=_SHORT_DESCRIPTION,
     long_description=_LONG_DESCRIPTION,
     classifiers=[],

@@ -1,2 +1,3 @@
-include mei/resources/README.md
+include mei/resources/README.rst
 include mei/resources/requirements.txt
+include mei/resources/version.txt
